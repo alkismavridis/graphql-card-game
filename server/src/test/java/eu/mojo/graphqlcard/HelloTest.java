@@ -1,7 +1,6 @@
-package test.eu.mojo.graphqlcard;
+package eu.mojo.graphqlcard;
 
 import org.junit.Test;
-import src.eu.mojo.graphqlcard.Hello;
 
 import static org.junit.Assert.assertEquals;
 
