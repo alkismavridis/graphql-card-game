@@ -14,5 +14,8 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Maven: junit:junit:4.10" level="project" />
     <orderEntry type="library" name="Maven: com.google.code.gson:gson:2.8.2" level="project" />
+    <orderEntry type="library" name="Maven: com.graphql-java:graphql-java-tools:4.3.0" level="project" />
+    <orderEntry type="library" name="Maven: com.graphql-java:graphql-java:6.0" level="project" />
+    <orderEntry type="library" name="Maven: org.neo4j.driver:neo4j-java-driver:1.4.4" level="project" />
   </component>
 </module>
