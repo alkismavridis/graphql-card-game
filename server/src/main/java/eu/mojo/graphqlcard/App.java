@@ -11,7 +11,7 @@ import org.neo4j.driver.v1.Driver;
 public class App {
     //region FIELDS
     private Config config;
-    private Driver dbDriver;
+    private Driver dbDriver; //joja mojo commit
     //endregion
 
 

@@ -9,7 +9,7 @@
         <module name="server" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="1.8">
+    <bytecodeTargetLevel target="9">
       <module name="server" target="9" />
     </bytecodeTargetLevel>
   </component>
