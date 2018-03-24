@@ -1,4 +1,4 @@
-package eu.mojo.graphqlcard;
+package eu.mojo.graphqlcard.core;
 
 
 import com.google.gson.JsonObject;
@@ -18,6 +18,7 @@ public class Config {
     private String dbURI;
     private String dbUsername;
     private String dbPassword;
+    private String dbRootNode;
     //endregion
 
 
@@ -26,6 +27,7 @@ public class Config {
         dbURI = JsonUtils.optString(job, "dbURI", "123");
         dbUsername = JsonUtils.optString(job, "dbUsername", "neo4j");
         dbPassword = JsonUtils.optString(job, "dbPassword", "password");
+        dbRootNode = JsonUtils.optString(job, "dbRootNode", "App");
     }
 
 
@@ -35,6 +37,7 @@ public class Config {
     public String getDbURI() { return dbURI; }
     public String getDbUsername() { return dbUsername; }
     public String getDbPassword() { return dbPassword; }
+    public String getDbRootNode() { return dbRootNode; }
 
     //endregion
 }

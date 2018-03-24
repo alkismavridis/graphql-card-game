@@ -1,4 +1,4 @@
-package eu.mojo.graphqlcard.user;
+package eu.mojo.graphqlcard.modules.user;
 
 /**
  * <h1>Basic User Entity</h1>
@@ -11,6 +11,7 @@ package eu.mojo.graphqlcard.user;
 
 public class User {
     //region fields
+    private long id;
     private String username;
     private String password;
     //endregion
@@ -38,5 +39,14 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
     //endregion
 }

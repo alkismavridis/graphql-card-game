@@ -1,10 +1,9 @@
-package eu.mojo.graphqlcard;
+package eu.mojo.graphqlcard.core;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import org.neo4j.driver.v1.AuthTokens;
-import org.neo4j.driver.v1.Driver;
-import org.neo4j.driver.v1.GraphDatabase;
+import eu.mojo.graphqlcard.persist.DB;
+import eu.mojo.graphqlcard.persist.impl.Neo4JDB;
 
 import java.nio.file.FileSystems;
 import java.nio.file.Files;
@@ -18,8 +17,6 @@ import java.nio.file.Path;
  * After start() is called, an App object can be accessed.
  * */
 public class AppInitializer {
-    private static App app;
-
     //region LIFE CYCLE
     public static void start(String dataDirstr) throws Exception {
         //Our mission is to create App object.
@@ -41,20 +38,16 @@ public class AppInitializer {
         Config config = new Config(job, appDataDir);
 
         //App needs a db Driver too...
-        Driver driver = GraphDatabase.driver(
-                config.getDbURI(),
-                AuthTokens.basic(config.getDbUsername(), config.getDbPassword()));
+        DB db = new Neo4JDB(config.getDbURI(), config.getDbUsername(),  config.getDbPassword(), config.getDbRootNode());
+        db.connect();
 
         //and finally...
-        app = new App(config, driver);
+        Apps.setInstance( new App(config, db) );
     }
 
     public static void stop() throws Exception {
-        app.getDbDriver().close();
+        Apps.get().getDB().disconnect();
     }
 
     //endregion
-
-
-    public static App getApp() { return app; }
 }

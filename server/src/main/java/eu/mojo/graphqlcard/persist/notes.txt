@@ -1,0 +1,56 @@
+1. DRIVER
+    application scoped.
+    thread safe
+
+2. SESSION (StatementRunner)
+    NOT thread safe
+    LOW COST CREATION (pool)
+    they wrap a tcp connection
+
+    2 types of transacionts: Transaction object (explicit) --- run()
+
+
+
+3. TRANSACTION (ALSO statementRunner)
+    close() Closing the transaction will complete it - it will commit if success() has been called.
+
+
+
+
+=================================   RESULTS ===================================
+
+StatementResult: This is an Iterator<Record> with methods like
+    hasNext(),
+    next()/peek()
+    keys() ???
+
+
+
+Record: Container for Cypher result values.
+            Supports getters with default values!
+
+
+Value
+    A unit of data that adheres to the Neo4j type system.
+    Kind of like a json object.
+    Cool tools for navigating, iterating ect.
+    isString, isNode to check types
+    asString, asNode etc to get the java types.
+    also getters with default values!
+
+Node implements Entity
+    can be retrieved from a Value.
+    it has its own values: Iterable<Values>
+    values(), keys(), containsKey(String)
+    id(),
+    hasLabel(), labels()
+
+
+Relationship implements Entity
+   can be retrieved from a Value.
+       it has its own values: Iterable<Values>
+       values(), keys(), containsKey(String)
+       id(),
+       hasType(), type(), startNodeId(), endNodeId()
+
+
