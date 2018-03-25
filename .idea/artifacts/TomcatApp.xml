@@ -1,0 +1,22 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="TomcatApp">
+    <output-path>$PROJECT_DIR$/out/artifacts/TomcatApp</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="server" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="junit:junit:4.12" />
+          <element id="library" level="project" name="com.google.code.gson:gson:2.8.2" />
+          <element id="library" level="project" name="com.graphql-java:graphql-java-tools:4.3.0" />
+          <element id="library" level="project" name="org.neo4j.driver:neo4j-java-driver:1.5.1" />
+        </element>
+        <element id="file-copy" path="$PROJECT_DIR$/server/resources/tomcat_config/web.xml" />
+        <element id="directory" name="data">
+          <element id="dir-copy" path="$PROJECT_DIR$/server/resources/appData" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

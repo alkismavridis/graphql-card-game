@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="JAVA_MODULE" version="4">
-  <component name="ExternalSystem" externalSystem="Maven" />
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_9">
-    <output url="file://$MODULE_DIR$/target/classes" />
-    <output-test url="file://$MODULE_DIR$/target/test-classes" />
+  <component name="NewModuleRootManager">
+    <output url="file://$MODULE_DIR$/../out/dummy" />
+    <output-test url="file://$MODULE_DIR$/../out/test" />
+    <exclude-output />
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
-      <excludeFolder url="file://$MODULE_DIR$/target" />
+      <sourceFolder url="file://$MODULE_DIR$/test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Maven: junit:junit:4.10" level="project" />
-    <orderEntry type="library" name="Maven: com.google.code.gson:gson:2.8.2" level="project" />
-    <orderEntry type="library" name="Maven: com.graphql-java:graphql-java-tools:4.3.0" level="project" />
-    <orderEntry type="library" name="Maven: com.graphql-java:graphql-java:6.0" level="project" />
-    <orderEntry type="library" name="Maven: org.neo4j.driver:neo4j-java-driver:1.4.4" level="project" />
+    <orderEntry type="library" exported="" name="junit:junit:4.12" level="project" />
+    <orderEntry type="library" exported="" name="com.google.code.gson:gson:2.8.2" level="project" />
+    <orderEntry type="library" exported="" name="com.graphql-java:graphql-java-tools:4.3.0" level="project" />
+    <orderEntry type="library" exported="" name="org.neo4j.driver:neo4j-java-driver:1.5.1" level="project" />
+    <orderEntry type="library" exported="" name="javax.servlet:javax.servlet-api:4.0.0" level="project" />
   </component>
 </module>
